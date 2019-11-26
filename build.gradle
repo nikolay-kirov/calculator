@@ -38,6 +38,10 @@ checkstyle {
 	checkstyleTest.enabled = false
 }
 
+task wrapper(type: Wrapper) {
+    gradleVersion = '4.1'
+}
+
 task acceptanceTest(type: Test) {
 	include '**/acceptance/**'
 	systemProperties System.getProperties()
